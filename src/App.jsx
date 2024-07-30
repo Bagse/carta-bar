@@ -5,10 +5,10 @@ import { CocktailSection } from "./components/CocktailSection";
 function App() {
   return (
     <div className="py-10 px-3 lg:px-80">
-      <div className="bg-[#141414] p-10 rounded-lg shadow-sm shadow-white">
+      <div className="bg-[#141414] py-10 px-4 lg:p-10 rounded-lg shadow-sm shadow-white">
         <Navbar />
         <h2 className="flex items-center place-content-center text-4xl font-bold pb-5">CÓCTELES</h2>
-        <section className="grid grid-cols-2 gap-10">
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           <CocktailSection title="PISCO" category="pisco" />
           <CocktailSection title="VODKA" category="vodka" />
           <CocktailSection title="RON" category="ron" />

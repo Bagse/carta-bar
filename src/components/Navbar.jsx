@@ -21,7 +21,7 @@ export function Navbar() {
         <p className="flex items-center gap-2 text-sm lg:text-base">
           <ClockIcon className="w-9 h-9 lg:h-auto lg:w-auto" /> Lunes a Domingo de 17:00 pm a 01:00 am
         </p>
-        <p className="flex items-center gap-2 text-xs lg:text-base">
+        <p className="flex items-center gap-2 text-sm lg:text-base">
           <MapIcon className="w-6 h-6 lg:h-auto lg:w-auto" /> Calle Plateros 305, Cusco
         </p>
       </div>

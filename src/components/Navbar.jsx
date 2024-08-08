@@ -19,7 +19,10 @@ export function Navbar() {
           <p>Horario de atención:</p>
         </div>
         <p className="flex items-center gap-2 text-sm lg:text-base">
-          <ClockIcon className="w-9 h-9 lg:h-auto lg:w-auto" /> Lunes a Domingo de 17:00 pm a 01:00 am
+          <ClockIcon className="w-9 h-9 lg:h-auto lg:w-auto" /> Lunes a Viernes de 17:00 pm a 12:00 am
+        </p>
+        <p className="flex items-center gap-2 text-sm lg:text-base">
+          <ClockIcon className="w-9 h-9 lg:h-auto lg:w-auto" /> Sábados a Domingos de 16:00 pm a 01:00 am
         </p>
         <p className="flex items-center gap-2 text-sm lg:text-base">
           <MapIcon className="w-6 h-6 lg:h-auto lg:w-auto" /> Calle Plateros 305, Cusco
@@ -29,7 +32,7 @@ export function Navbar() {
         <img
           src="./img/1a.webp"
           alt=""
-          className="w-[1000px] h-[600px] lg:w-[480px] lg:h-[450px] -mt-24 lg:-mt-20 object-cover"
+          className="w-[1000px] h-[640px] lg:w-[480px] lg:h-[490px] -mt-24 lg:-mt-20 object-cover"
         />
       </div>
     </section>

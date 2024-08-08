@@ -1,9 +1,12 @@
 import { getCocktails } from "../services/api";
 import { useState, useEffect } from "react";
+import { useCart } from "../context/CartContext";
+import QuantitySelector from "./QuantitySelector";
 
 export function CocktailSection({ title, category }) {
   const [cocktails, setCocktails] = useState([]);
   const [error, setError] = useState(null);
+  const { addToCart } = useCart();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,6 +28,17 @@ export function CocktailSection({ title, category }) {
     return <div>{error}</div>;
   }
 
+  const [quantities, setQuantities] = useState({});
+
+  const handleAddToCart = (cocktail, quantity) => {
+    addToCart({ ...cocktail, quantity, total: cocktail.price * quantity });
+    // Actualiza el estado local de cantidades
+    setQuantities({
+      ...quantities,
+      [cocktail.name]: quantity,
+    });
+  };
+
   return (
     <div className="flex flex-col gap-3">
       <h3 className="text-[#C7F070] text-3xl font-semibold border-b-4 border-dotted border-[#C7F070] w-28 lg:w-40">
@@ -39,7 +53,15 @@ export function CocktailSection({ title, category }) {
                 {cocktail.ingredients.join(", ")}
               </p>
             </div>
-            <span className="text-lg font-semibold">S/.{cocktail.price}</span>
+            <div className="">
+              <span className="text-lg font-semibold">S/.{quantities[cocktail.name]
+                ? cocktail.price * quantities[cocktail.name]
+                : cocktail.price}</span>
+              <QuantitySelector
+                initialQuantity={0}
+                onChange={(quantity) => handleAddToCart(cocktail, quantity)}
+              />
+            </div>
           </div>
         ))}
       </div>

@@ -140,7 +140,7 @@ const cocktails = [
   },
   {
     name: "GIN TONIC",
-    ingredients: ["Gin", "agua tónica", "limón"],
+    ingredients: ["Gin", "agua tónica"],
     price: 23,
     category: "gin",
   },
@@ -152,7 +152,7 @@ const cocktails = [
   },
   {
     name: "MARTINI",
-    ingredients: ["Gin", "ginger ale", "limón"],
+    ingredients: ["Gin", "vermouth"],
     price: 20,
     category: "gin",
   },
@@ -169,7 +169,7 @@ const cocktails = [
     category: "whisky",
   },
   {
-    name: "GOD FATHER",
+    name: "GODFATHER",
     ingredients: ["Whisky escocés", "amaretto"],
     price: 25,
     category: "whisky",
@@ -237,13 +237,13 @@ const cocktails = [
   {
     name: "GOLOSA",
     ingredients: ["Pisco", "ron", "whiky", "tequila", "coca cola"],
-    price: 30,
+    price: 25,
     category: "casa",
   },
   {
-    name: "PERUANASO",
+    name: "CRIMSON MOON",
     ingredients: ["Pisco", "jarabe chicha morada", "limón", "sprite"],
-    price: 27,
+    price: 25,
     category: "casa",
   },
   {
@@ -255,7 +255,7 @@ const cocktails = [
       "licor de café",
       "jugo de piña",
     ],
-    price: 29,
+    price: 27,
     category: "casa",
   },
 ];
